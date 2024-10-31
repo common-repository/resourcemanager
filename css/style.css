@@ -1,0 +1,234 @@
+:root {
+  /* Colors */
+  --freeTime: #89d67e;
+  --reservedTime: #778FFF;
+  --reservedTimeText: white;
+  --ownReservedTime: #8946FF;
+  --adminReservedTime: #334FCC;
+  --freeTimeFreeDay: #dbf0d8;
+  --reservedTimeFreeDay: #9BA9FF;
+  --ownReservedTimeFreeDay: #C6A5FF;
+  --askForBorder: red;
+  
+  --today: #e8e800;
+  
+  
+  /* Table spaces */
+  --dayStart: 10%;
+  --dayEnd: 90%;
+}
+
+/* monthly table */
+.resourcemanager.month {
+	margin: 0 5px;
+}
+.resourcemanager.month .today {
+	background-color: var(--today);
+}
+
+.resourcemanager.month tr + tr > td {
+  height: 5px;
+  background-image:
+    linear-gradient(grey,grey),
+    linear-gradient(white,white),
+    linear-gradient(grey,grey);
+  background-size:
+    var(--dayStart)  100%,
+    var(--dayEnd)  100%,
+    100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 0;
+}
+.resourcemanager.month tr + tr > td:first-of-type {
+  width: 100px;
+  background-image: initial;
+}
+
+.resourcemanager.month tr + tr > td .timeSpace {
+	position: absolute;
+	height: 20px;
+	min-width: 15px;
+	border-radius: 5px;
+	display:block;
+}
+.resourcemanager.month tr + tr > td .timeSpace.free {
+	background: var(--freeTime);
+	z-index: 2;
+}
+.resourcemanager.month tr + tr > td .timeSpace.free.partially_reserved {
+    border-inline: 5px solid var(--reservedTime);
+    -webkit-writing-mode: vertical-lr;
+}
+.resourcemanager.month tr + tr > td .timeSpace.free.partially_reserved[data-adminview="true"] {
+    border-inline: 5px solid var(--adminReservedTime);
+    -webkit-writing-mode: vertical-lr;
+}
+.resourcemanager.month tr + tr > td .timeSpace.free.partially_reserved.forCurrentUser {
+    border-inline: 5px solid var(--ownReservedTime);
+    -webkit-writing-mode: vertical-lr;
+}
+.resourcemanager.month tr + tr > td .timeSpace.reserved {
+	background: var(--reservedTime);
+	color: var(--reservedTimeText);
+	z-index: 3;
+	overflow: hidden;
+	white-space: nowrap;
+	padding-left: 2px;
+	line-height:20px;
+}
+.resourcemanager.month tr + tr > td .timeSpace.reserved:hover {
+	color: var(--reservedTimeText);
+}
+.resourcemanager.month tr + tr > td .timeSpace.reserved[data-adminview="true"] {
+	background: var(--adminReservedTime);
+}
+.resourcemanager.month tr + tr > td .timeSpace.reserved.forCurrentUser {
+	background: var(--ownReservedTime);
+}
+.resourcemanager.month tr + tr > td .timeSpace.reserved.forCurrentUser[data-adminview="true"] {
+	background-color: var(--adminReservedTime);
+	background: repeating-linear-gradient( -45deg, var(--ownReservedTime), var(--ownReservedTime) 4px, var(--adminReservedTime) 4px, var(--adminReservedTime) 4px );
+}
+.resourcemanager.month tr + tr > td .timeSpace.reserved[data-type="ASKFOR"]  {
+	border: 2px solid var(--askForBorder);
+}
+
+.resourcemanager.month tr + tr > td .timeSpace {
+	outline: 1px solid grey;
+}
+.resourcemanager.month tr + tr > td .timeSpace.free:hover,
+.resourcemanager.month tr + tr > td .timeSpace.reserved:hover,
+.resourcemanager.month tr + tr > td .timeSpace.reserved.hoverInclude,
+.resourcemanager.month tr + tr > td .timeSpace.free:focus,
+.resourcemanager.month tr + tr > td .timeSpace.reserved:focus,
+.resourcemanager.month tr + tr > td .timeSpace.reserved.focusInclude {
+	z-index: 4;
+	outline: 2px solid red;
+}
+
+.resourcemanager.month tr + tr.weekday_0 > td > .timeSpace.free,
+.resourcemanager.month tr + tr.weekday_6 > td > .timeSpace.free {
+	background: var(--freeTimeFreeDay);
+	z-index: 2;
+}
+.resourcemanager.month tr + tr.weekday_0 > td > .timeSpace.reserved,
+.resourcemanager.month tr + tr.weekday_6 > td > .timeSpace.reserved {
+	background: var(--reservedTimeFreeDay);
+	z-index: 3;
+}
+.resourcemanager.month tr + tr.weekday_0 > td > .timeSpace.reserved.forCurrentUser,
+.resourcemanager.month tr + tr.weekday_6 > td > .timeSpace.reserved.forCurrentUser {
+	background: var(--ownReservedTimeFreeDay);
+}
+
+
+
+.resourcemanager.month a.overlapping {
+    position: absolute;
+	right: 2px;
+	top: -2px;
+    z-index: 10;
+}
+.resourcemanager.month a.overlapping::after {
+	content: '\25B6';
+}
+.resourcemanager.month a.overlapping.open::after {
+	content: '\25BC';
+}
+.resourcemanager.month a.overlapping ~ div {
+    display: none;
+}
+.resourcemanager.month a.overlapping.open ~ div {
+    display: block;
+}
+.resourcemanager.month a.overlapping.open ~ div > a {
+    margin-top: -26px;
+}
+
+
+
+
+/* dialog */
+#resourcemanager-dialog-form label {
+	font-weight: bold;
+}
+#resourcemanager-dialog-form input,
+#resourcemanager-dialog-form select {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem; /* Ändere die Schriftgröße nach Bedarf */
+}
+
+#resourcemanager-dialog-form.userView label ~ span.userView {
+	display: inline;
+}
+#resourcemanager-dialog-form.userView label ~ input.adminView,
+#resourcemanager-dialog-form.userView label ~ select.adminView,
+#resourcemanager-dialog-form.userView label ~ .select2 {
+	display: none;
+}
+
+#resourcemanager-dialog-form.adminView label ~ input.adminView,
+#resourcemanager-dialog-form.adminView label ~ select.adminView,
+#resourcemanager-dialog-form.adminView label ~ .select2 {
+	display: block;
+}
+#resourcemanager-dialog-form.adminView label ~ input.adminView[type="date"],
+#resourcemanager-dialog-form.adminView label ~ input.adminView[type="time"] {
+	display: inline;
+}
+#resourcemanager-dialog-form.adminView label ~ span.userView,
+#resourcemanager-dialog-form.adminView details + div.userView {
+	display: none;
+}
+
+#resourcemanager-progressbar-dialog {
+    background: url("data:image/gif;base64,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");
+	height: 30px!important;
+	min-height: unset!important;
+}
+div[aria-describedby="resourcemanager-progressbar-dialog"] .ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+
+/* Request lines */
+#ask_for > div {
+	color: red;
+}
+
+/* Recurring Dates */
+#resourcemanager-dialog-form details {
+	display: inline-block;
+	cursor: pointer;
+}
+
+#resourcemanager-dialog-form summary {
+	outline: none;
+	list-style: none;
+}
+
+#resourcemanager-dialog-form summary::before {
+	content: "\25B6";
+	padding-right: 0.5em;
+	transition: transform 0.3s ease-out;
+	display: inline-block;
+}
+
+#resourcemanager-dialog-form details[open] > summary::before {
+	transform: rotate(90deg);
+}
+
+
+#resourcemanager-dialog-form.adminView details > div {
+	margin-left: 20px;
+	border-left: 2px solid #ccc;
+	padding-left: 10px;
+}
+
+#resourcemanager-dialog-form.adminView details input.adminView[type="number"] {
+	width: 80px;
+	display: inline;
+}
+#resourcemanager-dialog-form.adminView details select.adminView {
+	display: inline;
+}

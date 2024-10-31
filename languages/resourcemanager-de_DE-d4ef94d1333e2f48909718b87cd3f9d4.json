@@ -1,0 +1,75 @@
+{
+    "translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+    "generator": "WP-CLI\/2.5.0",
+    "source": "js\/gui.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "en",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Cancel": [
+                "Abbrechen"
+            ],
+            "Su": [
+                "So"
+            ],
+            "Mo": [
+                "Mo"
+            ],
+            "Tu": [
+                "Di"
+            ],
+            "We": [
+                "Mi"
+            ],
+            "Th": [
+                "Do"
+            ],
+            "Fr": [
+                "Fr"
+            ],
+            "Sa": [
+                "Sa"
+            ],
+            "days": [
+                "Tage"
+            ],
+            "weeks": [
+                "Wochen"
+            ],
+            "months": [
+                "Monate"
+            ],
+            "years": [
+                "Jahre"
+            ],
+            "every": [
+                "Jede"
+            ],
+            "till": [
+                "bis"
+            ],
+            "recurring": [
+                "Wiederkehrend"
+            ],
+            "Pending request": [
+                "Ausstehende Anfrage"
+            ],
+            "Ask for": [
+                "Anfragen"
+            ],
+            "Save": [
+                "Speichern"
+            ],
+            "Confirm": [
+                "Best\u00e4tigen"
+            ],
+            "Delete": [
+                "L\u00f6schen"
+            ]
+        }
+    }
+}

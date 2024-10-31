@@ -1,0 +1,330 @@
+# Copyright (C) 2022 Alexander Hacker
+# This file is distributed under the propritary.
+msgid ""
+msgstr ""
+"Project-Id-Version: Resourcemanager 0.8.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/resourcemanager\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-11-22T12:21:54+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+
+#. Plugin Name of the plugin
+#: include/admin_menu.php:82
+#: include/admin_menu.php:83
+#: include/admin_menu.php:94
+#: include/admin_menu.php:108
+#: include/ajax.php:264
+#: include/ajax.php:277
+#: include/ajax.php:289
+#: include/ajax.php:301
+#: include/ajax.php:313
+msgid "Resourcemanager"
+msgstr ""
+
+#. Description of the plugin
+msgid "Visualizes and manages definable resources in an compact month view"
+msgstr "Visualisiert und verwaltet definierbare Ressourcen in einer kompakten Monatsansicht"
+
+#. Author of the plugin
+msgid "Alexander Hacker"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://edv-hacker.de"
+msgstr ""
+
+#: include/admin_menu.php:45
+msgid "Resource Calendar"
+msgstr "Ressourcenkalender"
+
+#: include/admin_menu.php:51
+msgid "Resources"
+msgstr "Ressourcen"
+
+#: include/admin_menu.php:57
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: include/admin_menu.php:63
+msgid "About"
+msgstr "Über"
+
+#: include/admin_menu.php:133
+msgid "admin groups"
+msgstr "Admin-Gruppen"
+
+#: include/admin_menu.php:134
+#: include/admin_menu.php:250
+#: include/admin_menu.php:263
+msgid "custom fields"
+msgstr "individuelle Felder"
+
+#: include/admin_menu.php:249
+#: include/admin_menu.php:262
+msgid "name"
+msgstr "Name"
+
+#: include/admin_menu.php:251
+#: include/admin_menu.php:264
+#: include/admin_menu.php:291
+#: include/admin_menu.php:305
+msgid "owner"
+msgstr "Besitzer"
+
+#: include/admin_menu.php:252
+#: include/admin_menu.php:265
+msgid "last author"
+msgstr "letzter Autor"
+
+#: include/admin_menu.php:253
+#: include/admin_menu.php:266
+#: include/admin_menu.php:293
+#: include/admin_menu.php:307
+msgid "last changed"
+msgstr "zuletzt geändert"
+
+#: include/admin_menu.php:254
+#: include/admin_menu.php:267
+#: include/admin_menu.php:294
+#: include/admin_menu.php:308
+msgid "delete"
+msgstr "Löschen"
+
+#: include/admin_menu.php:289
+#: include/admin_menu.php:303
+msgid "designation"
+msgstr "Bezeichnung"
+
+#: include/admin_menu.php:290
+#: include/admin_menu.php:304
+msgid "resources"
+msgstr "Ressourcen"
+
+#: include/admin_menu.php:292
+#: include/admin_menu.php:306
+msgid "author"
+msgstr "Autor"
+
+#: include/admin_menu.php:295
+#: include/admin_menu.php:309
+msgid "shortcode"
+msgstr "Shortcode"
+
+#: include/admin_menu.php:315
+msgid "The following shortcode parameters are possible"
+msgstr "Folgende Parameter im Shortcode sind verfügbar"
+
+#: include/admin_menu.php:317
+msgid "ID of this group"
+msgstr "Gruppen-ID"
+
+#: include/admin_menu.php:317
+msgid "mandatory"
+msgstr "verpflichtend"
+
+#: include/admin_menu.php:318
+msgid "switch to the statistics-page of this group"
+msgstr "Zur Statistik-Seite dieser Gruppe wechseln"
+
+#: include/admin_menu.php:328
+msgid "Confirm deletion"
+msgstr "Löschvorgang bestätigen"
+
+#: include/admin_menu.php:329
+#: include/shortcode_handler.php:124
+msgid "These items will be permanently deleted and cannot be recovered. Are you sure?"
+msgstr "Diese Einträge werden permanent gelöscht und können nicht wiederhergestellt werden. Fortfahren?"
+
+#: include/ajax.php:265
+#: include/ajax.php:302
+msgid "Resource request accepted"
+msgstr "Ressourcenanfrage wurde akzeptiert"
+
+#: include/ajax.php:266
+#: include/ajax.php:279
+#: include/ajax.php:303
+#: include/ajax.php:315
+msgid "Your request for"
+msgstr "Ressourcenanfrage für"
+
+#: include/ajax.php:269
+msgid "was accepted."
+msgstr "wurde akzeptiert"
+
+#: include/ajax.php:278
+msgid "Resource request rejected"
+msgstr "Ressourcenanfrage abgelehnt"
+
+#: include/ajax.php:282
+msgid "was rejected."
+msgstr "wurde abgelehnt"
+
+#: include/ajax.php:290
+msgid "Resource requested"
+msgstr "Ressource angefragt"
+
+#: include/ajax.php:291
+msgid "Someone requested"
+msgstr "Jemand frage nach"
+
+#: include/ajax.php:294
+msgid "Please review the request and accept or reject it."
+msgstr "Bitte die Anfrage überprüfen und akzeptieren oder ablehnen"
+
+#: include/ajax.php:306
+msgid "was registered for you."
+msgstr "wurde für Sie registriert."
+
+#: include/ajax.php:314
+msgid "Resource reservation deleted"
+msgstr "Ressourcenreservierung gelöscht"
+
+#: include/ajax.php:318
+msgid "was deleted."
+msgstr "wurde gelöscht."
+
+#: include/setup.php:8
+msgid "Donate"
+msgstr "Spenden"
+
+#: include/shortcode_handler.php:31
+msgid "Back"
+msgstr "Zurück"
+
+#: include/shortcode_handler.php:68
+msgid "Occupancy"
+msgstr "Belegung"
+
+#: include/shortcode_handler.php:72
+msgid "Resource"
+msgstr "Ressource"
+
+#: include/shortcode_handler.php:79
+msgid "reserved for"
+msgstr "Reserviert für"
+
+#: include/shortcode_handler.php:86
+msgid "from"
+msgstr "von"
+
+#: include/shortcode_handler.php:95
+msgid "to"
+msgstr "bis"
+
+#: include/shortcode_handler.php:104
+msgid "description"
+msgstr "Beschreibung"
+
+#: include/shortcode_handler.php:109
+msgid "persons"
+msgstr "Personen"
+
+#: include/shortcode_handler.php:127
+msgid "Loading"
+msgstr "Lade"
+
+#: include/shortcode_handler.php:132
+msgid "Statistics for this group"
+msgstr "Statistiken für diese Gruppe"
+
+#: js/admin-gui.js:42
+#: js/admin-gui.js:243
+msgid "OK"
+msgstr ""
+
+#: js/admin-gui.js:46
+#: js/admin-gui.js:247
+#: js/gui.js:1032
+#: js/gui.js:1062
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: js/admin-gui.js:140
+#: js/admin-gui.js:309
+msgid "New entry"
+msgstr "Neuer Eintrag"
+
+#: js/admin-gui.js:391
+msgid "Saved"
+msgstr "Gespeichert"
+
+#: js/gui.js:482
+msgid "Su"
+msgstr "So"
+
+#: js/gui.js:483
+msgid "Mo"
+msgstr "Mo"
+
+#: js/gui.js:484
+msgid "Tu"
+msgstr "Di"
+
+#: js/gui.js:485
+msgid "We"
+msgstr "Mi"
+
+#: js/gui.js:486
+msgid "Th"
+msgstr "Do"
+
+#: js/gui.js:487
+msgid "Fr"
+msgstr "Fr"
+
+#: js/gui.js:488
+msgid "Sa"
+msgstr "Sa"
+
+#: js/gui.js:488
+msgid "days"
+msgstr "Tage"
+
+#: js/gui.js:488
+msgid "weeks"
+msgstr "Wochen"
+
+#: js/gui.js:488
+msgid "months"
+msgstr "Monate"
+
+#: js/gui.js:488
+msgid "years"
+msgstr "Jahre"
+
+#: js/gui.js:488
+msgid "every"
+msgstr "Jede"
+
+#: js/gui.js:488
+msgid "till"
+msgstr "bis"
+
+#: js/gui.js:488
+msgid "recurring"
+msgstr "Wiederkehrend"
+
+#: js/gui.js:726
+msgid "Pending request"
+msgstr "Ausstehende Anfrage"
+
+#: js/gui.js:970
+msgid "Ask for"
+msgstr "Anfragen"
+
+#: js/gui.js:988
+msgid "Save"
+msgstr "Speichern"
+
+#: js/gui.js:990
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#: js/gui.js:999
+msgid "Delete"
+msgstr "Löschen"
